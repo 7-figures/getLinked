@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+section{
+    width: 100%;
+}
+
+
+.navbar {
+
+    margin: 0;
+
+}
+
+
+
+
+.box{
+    width: 100%;
+height: 853px;
+}
+
+
+
+
+
+
+.pic{
+   max-width: 100%;
+}
+
+
+ 
+
+        .judge-section{
+            margin-top: 20px;
+            margin-left: 27px;
+            height: 500px;
+            margin-right:0px ;
+        }
+        .humans img{
+            width: 700px;
+height: 687px;
+padding-top: 150px;
+background:url('./images/Ellipse\ 2.png') ;
+background-repeat: no-repeat;
+background-position: center;
+background-position-x: 95px;
+background-position-y: 105px;
+position: absolute;
+        }
+        .star8 img{
+            width: 30px;
+            height: 36px;
+        position: absolute;
+        left: 220px;
+        margin-top: 39px;
+        
+        }
+        .star9 img{
+            width: 30px;
+            height: 36px;
+        position: absolute;
+        left: 730px;
+        margin-top: 520px;
+        }
+        .star10 img{
+            width: 30px;
+            height: 36px;
+        position: absolute;
+        left: 110px;
+        margin: 380px;
+        }
+        .judge-text{
+            width: 100%;
+            padding-top: 60px;
+            padding-left: 190px;
+        }
+        .judge-text h6{
+            width: 267px;
+            height: 67px;
+color: #FFF;
+font-family: Clash Display;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 0%;
+margin-bottom: 0px;
+margin-bottom: -28px;
+    
+        }
+        .judge-text p{
+            color: #FFF;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 173.5%;
+        }
+       
+       
+        
+        
+        
