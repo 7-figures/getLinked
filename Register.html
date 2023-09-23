@@ -1,20 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <title>getLinked</title>
-<body>
 
-    <script></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand logo" href="Index2.html">
+        get<span style="color: #D434FE;">Linked</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse gap-3 p-3" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="Index.html">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link reg" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container container-fluid formy col-md-12 d-sm-flex">
+    <div class=" man img-responsive img-fluid"><img src="./images/3d-graphic-designer-showing-thumbs-up-png 1.png" />
+    </div>
+    <div class="man-text">
+      <h6 style="color: #D434FE;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;">Register</h6>
+      <div class="be d-flex">
+        <p style="padding-top: 10px;">Be part of this movement!</p>
+        <div> <img src="./images/1f6b6-2640.png" /></div>
+        <div class="img-responsive img-fluid"><img src="./images/image_processing20200511-10310-13mnlsx.png" /></div>
+      </div>
+      <h6 style="color: #FFF;font-family: Montserrat;font-size: 24px; font-style: normal; font-weight: 400; line-height: normal;">CREATE YOUR ACCOUNT</h6>
+      <form class="row d-sm-flex" action="" method="post">
+        <div class="col-sm-4 p-3 g-3">
+          <label for="name2" class="form-label">Team’s Name</label>
+          <input type="text" class="form-control" id="name2 " placeholder="Enter the name of your group">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail"placeholder="Enter your email address">
+      
+          <label for="category" class="form-label">Category</label>
+          <select id="Category" class="form-select">
+            <option selected>Select your category...</option>
+            <option>Front End</option>
+          </select>
+        </div>
+        <div class="col-sm-4 p-3 g-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="number" class="form-control" id="phone" placeholder="Enter your phone number">
+          <label for="project" class="form-label">project Topic</label>
+          <input type="text" class="form-control" id="project" placeholder="What is your group project topic">
+         <label for="size" class="form-label">Group Size</label>
+          <select id="size" class="form-select">
+            <option selected>Select...</option>
+          
+            <option>1-4</option>
+            <option>4-7</option>
+            <option>7-12</option>
+          </select>
+         
+        </div>
+        <div style="color: #FF26B9; font-family: Montserrat; font-size: 12px; font-style: italic; font-weight: 400;line-height: normal;"><p>Please review your registration details before submitting</p></div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck" style="color: #FFF;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;">
+              I agreed with the event terms and conditions  and privacy policy
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" ><a href="success.html">Register Now</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const preRegistration = new FormData(form);
+      const registration = new URLSearchParams(preInfo)
+      console.log(registration)
+      fetch('https://backend.getlinked.ai/hackathon/registration',{
+        method: "POST",
+        body: registration,
+      })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
